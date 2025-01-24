@@ -1,0 +1,482 @@
+:root {
+    --primary: #fae6ee;
+    --secondary: #ffc8dd;
+    --gary: #e1e1e1;
+    --gray-background: #644f44;
+    --font-primary: Poppins;
+    --fonst-secondary: Playwrite AR, cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.5rem;
+    background-color: var(--primary);
+    font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fonst-secondary)
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--gray-background);
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.cuenta-regresiva {
+    width: 100%;
+    color: var(--gray-background);
+    background-position: bottom center;
+    background-image: url("../public/fondo.webp");
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.simply-section {
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simply-amount {
+    font-size: 5rem;
+    text-align: center;
+    display: block;
+}
+
+/* formulario de confirmacion */
+.confirmar-presencia {
+    width: 100%;
+    height: 3s0rem;
+    margin-top: 3rem;
+    padding: 5rem;
+    background-color: var(--secondary);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.presencia-form {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+
+.campo label {
+    font-size: 1.5rem;
+}
+
+.presencia-form button {
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: var(--gray-background);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.campos {
+    display: flex;
+    gap: 5rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+#errors {
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+/* media queris */
+@media (min-width: 768px) {
+    .presencia-form {
+        width: 50rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .cuenta-regresiva {
+
+        font-size: 2rem;
+    }
+}
+
+/*sebastian css*/
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger div {
+    background-color: #c09ba9;
+    height: 4px;
+    margin: 5px 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffc8dd;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 999;
+}
+
+.menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #c09ba9;
+}
+
+.menu.active {
+    left: 0;
+    border: 1px solid #c09ba9;
+}
+
+
+.sectionTexto {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.texto {
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin: 10px 0 10px 0;
+    padding: 20px;
+}
+
+.imgTexto {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+.imgPre {
+    width: 100%;
+    height: 100%;
+}
+
+.fechaXV {
+    background-image: url("../public/7d883b1325ff73bedc018848e51d1be7.png");
+    background-position: center center;
+    background-size: 350px;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    place-content: center;
+}
+
+
+
+.musica a {
+    border-radius: 15px;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--gray-background);
+    font-family: var(--font-primary);
+    padding: 10px;
+    background-color: #ffc8dd;
+    cursor: pointer;
+
+}
+
+
+.copy {
+    text-align: center;
+    background-color: #ffc8dd;
+    color: #91727e;
+}
+
+@media (min-width: 768px) {
+    .fechaXV {
+        background-size: 500px;
+    }
+
+    .fechas-regresiva {
+        display: flex;
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+.adornoCuenta {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .adornoCuenta {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+
+/* caruxel */
+.stack {
+    width: 95%;
+    height: 600px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-card {
+    height: 550px;
+    object-fit: cover;
+}
+
+#imgID {
+    margin-top: 100px;
+}
+
+.card {
+    width: 90%;
+    min-height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-family: sans-serif;
+    font-size: 10rem;
+    color: #00000080;
+    box-shadow: 0 5px 10px 0 #00000040, 0 15px 20px 0#00000020;
+    transition: transform 200ms;
+}
+
+@media (min-width: 768px) {
+    .img-card {
+        height: 500px;
+
+    }
+}
+
+.card:nth-last-child(n + 4) {
+    --y: calc(-40% + -30px);
+    transform: translate(-50%, var(--y)) scale(0.9);
+    box-shadow: 0 0 1px 1px #00000003;
+}
+
+.card:nth-last-child(3) {
+    --y: calc(-50% + -15px);
+    transform: translate(-50%, var(--y)) scale(0.95);
+}
+
+.card:nth-last-child(2) {
+    --y: calc(-50%);
+    transform: translate(-50%, var(--y)) scale(1);
+}
+
+.card:nth-last-child(1) {
+    --y: calc(-50% + 50px);
+    transform: translate(-50%, var(--y)) scale(1);
+}
+
+@keyframes swap {
+    50% {
+        transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
+        z-index: -1;
+    }
+}
+
+.adorno{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.sectionConf{
+    width: 95%;
+    display: block;
+    margin: 0 auto
+}
+.musica fieldset {
+    margin: 1rem;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.musica .image {
+    width: 200px;
+}
+
+.musica p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.musica legend {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--secondary);
+    color: var(--gray-background);
+    padding: 0 1rem;
+    border-radius: 2rem;
+}
+
+.musica .petrona {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .sectionConf{
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .musica{
+       width: 100%;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Fijado en la pantalla */
+    z-index: 1;
+    /* Asegura que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ocupa toda la pantalla */
+    height: 100%;
+    /* Ocupa toda la pantalla */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    /* Centrado vertical y horizontal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Ancho del modal */
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* Estilos para el botón de cierre */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
