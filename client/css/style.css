@@ -1,10 +1,10 @@
 :root {
-    --primary: #fae6ee;
-    --secondary: #ffc8dd;
-    --gary: #e1e1e1;
-    --gray-background: #644f44;
+    --primary: #142738;
+    --secondary: #1F5B73;
+    --gary: #5b3e29;
+    --gray-background: #D9E6EB;
     --font-primary: Poppins;
-    --fonst-secondary: Playwrite AR, cursive;
+    --fonst-secondary: roboto ;
 }
 
 * {
@@ -50,11 +50,15 @@ h2 {
 
 .cuenta-regresiva {
     width: 100%;
-    color: var(--gray-background);
+    color: #D9E6EB;
     background-position: bottom center;
-    background-image: url("../public/fondo.webp");
+    background-image: url("../public/whisky.png");
     text-align: center;
     font-size: 1.5rem;
+}
+
+.cuenta-regresiva h2{
+    font-size: 25px;
 }
 
 .simply-section {
@@ -171,7 +175,7 @@ h2 {
 }
 
 .hamburger div {
-    background-color: #c09ba9;
+    background-color: var(--gray-background);
     height: 4px;
     margin: 5px 0;
     width: 100%;
@@ -184,7 +188,10 @@ h2 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #ffc8dd;
+    background-image: url("../public/leo3.jpeg");
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     overflow-x: hidden;
     transition: 0.4s;
     padding-top: 60px;
@@ -195,18 +202,18 @@ h2 {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
+    color: var(--gray-background);
     display: block;
     transition: 0.3s;
 }
 
 .menu a:hover {
-    background-color: #c09ba9;
+    background-color: var(--primary);
 }
 
 .menu.active {
     left: 0;
-    border: 1px solid #c09ba9;
+    border: 1px solid var(--primary);
 }
 
 
@@ -222,6 +229,7 @@ h2 {
     border-radius: 12px;
     margin: 10px 0 10px 0;
     padding: 20px;
+    color: #D9E6EB;
 }
 
 .imgTexto {
@@ -239,15 +247,21 @@ h2 {
 }
 
 .fechaXV {
-    background-image: url("../public/7d883b1325ff73bedc018848e51d1be7.png");
+    background-image: url("../public/gemini.png");
     background-position: center center;
-    background-size: 350px;
+    background-size: 400px;
     background-repeat: no-repeat;
     text-align: center;
     width: 100%;
     height: 500px;
     display: grid;
     place-content: center;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.fechaXV h2{
+    color: black;
 }
 
 
@@ -261,7 +275,7 @@ h2 {
     color: var(--gray-background);
     font-family: var(--font-primary);
     padding: 10px;
-    background-color: #ffc8dd;
+    background-color: var(--secondary);
     cursor: pointer;
 
 }
@@ -269,8 +283,8 @@ h2 {
 
 .copy {
     text-align: center;
-    background-color: #ffc8dd;
-    color: #91727e;
+    background-color: var(--primary);
+    color: var(--gray-background);
 }
 
 @media (min-width: 768px) {
@@ -406,6 +420,7 @@ h2 {
 .musica p {
     font-size: 2rem;
     text-align: center;
+    color: var(--gray-background);
 }
 
 .musica legend {

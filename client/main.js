@@ -2,10 +2,10 @@ import "./css/style.css";
 
 //main
 simplyCountdown("#app", {
-  year: 2024, // required
-  month: 8, // required
-  day: 24, // required
-  hours: 22, // Default is 0 [0-23] integer
+  year: 2025, // required
+  month: 2, // required
+  day: 9, // required
+  hours: 14, // Default is 0 [0-23] integer
   minutes: 0, // Default is 0 [0-59] integer
   seconds: 0, // Default is 0 [0-59] integer
   words: {
