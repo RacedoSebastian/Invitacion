@@ -542,3 +542,96 @@ h2 {
   font-size: 30px;
   color: white;
 }
+
+@media (min-width: 1024px) {
+  .header .imgPre {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+
+  .title h1 {
+    font-size: 5rem;
+  }
+
+  .cuenta-regresiva {
+    padding: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .sectionTexto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 4rem;
+  }
+
+  .sectionTexto .texto {
+    max-width: 600px;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+
+  .adorno {
+    width: 250px;
+    margin: 0;
+  }
+
+  .fechaXV {
+    background-size: 350px;
+    height: 400px;
+  }
+
+  .fechas-regresiva {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .sectionConf {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 95%;
+    margin: 0 auto 5rem auto;
+  }
+
+  .musica {
+    width: 100%;
+  }
+
+  .musica fieldset {
+    padding: 2rem;
+    gap: 2rem;
+    height: 100%;
+  }
+
+  .musica .image {
+    width: 250px;
+  }
+
+  .confirmar-presencia {
+    height: auto;
+    padding: 6rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .presencia-form {
+    width: 60rem;
+    margin: 0 auto;
+  }
+
+  .campos {
+    justify-content: center;
+  }
+
+  .modal-content {
+    margin-top: 10%;
+  }
+}
