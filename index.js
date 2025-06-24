@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const options = {
-  origin: [process.env.ORIGEN, "http://localhost:5501"],
+  origin: [process.env.ORIGEN, "http://localhost:5173"],
   credentials: true,
 };
 
