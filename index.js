@@ -1,9 +1,16 @@
 import express from "express";
 import cors from "cors";
 import { routes } from "./mailer.js";
+import dotenv from "dotenv";
+dotenv.config();
+
+const options = {
+  origin: [process.env.ORIGEN, "http://localhost:5173"],
+  credentials: true,
+};
 
 const app = express();
-app.use(cors());
+app.use(cors(options));
 app.use(express.json());
 
 app.use("/api", routes);
