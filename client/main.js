@@ -1,10 +1,8 @@
-import "./css/style.css";
-
 //main
 simplyCountdown("#app", {
-  year: 2024, // required
-  month: 8, // required
-  day: 24, // required
+  year: 2025, // required
+  month: 7, // required
+  day: 19, // required
   hours: 22, // Default is 0 [0-23] integer
   minutes: 0, // Default is 0 [0-59] integer
   seconds: 0, // Default is 0 [0-59] integer
@@ -38,8 +36,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const nombre = e.target.nombre.value;
   console.log("🚀 ~ form.addEventListener ~ nombre:", nombre);
-  const email = e.target.email.value;
-  console.log("🚀 ~ form.addEventListener ~ email:", email);
+  // const email = e.target.email.value;
+  // console.log("🚀 ~ form.addEventListener ~ email:", email);
   const radio = e.target.confirmar.value;
   console.log("🚀 ~ form.addEventListener ~ radio:", radio);
 
@@ -49,7 +47,7 @@ form.addEventListener("submit", (e) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email: email, name: nombre, confirm: radio }),
+    body: JSON.stringify({ name: nombre, confirm: radio }),
   })
     .then((response) => response.json())
     .then((data) => {

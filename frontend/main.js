@@ -24,9 +24,9 @@ document.querySelector("#app").innerHTML = `
 
 setupCounter(document.querySelector("#counter"));
 simplyCountdown(".app", {
-  year: 2024, // required
-  month: 9, // required
-  day: 25, // required
+  year: 2025, // required
+  month: 7, // required
+  day: 19, // required
   hours: 0, // Default is 0 [0-23] integer
   minutes: 0, // Default is 0 [0-59] integer
   seconds: 0, // Default is 0 [0-59] integer
