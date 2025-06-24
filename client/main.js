@@ -32,8 +32,13 @@ simplyCountdown("#app", {
 // manejo de formulario de cnfirmacion
 const form = document.getElementById("confirmation-form");
 const errors = document.getElementById("errors");
+const submitButton = form.querySelector("button[type='submit']");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  submitButton.disabled = true;
+  submitButton.classList.add("opacity-50", "cursor-not-allowed");
+  submitButton.textContent = "Enviando...";
+
   const nombre = e.target.nombre.value;
   console.log("🚀 ~ form.addEventListener ~ nombre:", nombre);
   // const email = e.target.email.value;
@@ -56,6 +61,7 @@ form.addEventListener("submit", (e) => {
         data.map((message) => {
           console.log("🚀 ~ data.map ~ message:", message.issue);
           errors.innerHTML = message.issue;
+          submitButton.disabled = false;
         });
         return;
       }
@@ -66,6 +72,11 @@ form.addEventListener("submit", (e) => {
     .catch((error) => {
       console.error("Error:", error);
       alert(error, "Hubo un error al enviar los datos");
+    })
+    .finally(() => {
+      submitButton.disabled = false; // Rehabilitar siempre al final
+      submitButton.classList.remove("opacity-50", "cursor-not-allowed");
+      submitButton.textContent = "Confirmar";
     });
 });
 //funcion de navbar

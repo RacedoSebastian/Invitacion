@@ -1,7 +1,6 @@
 import z from "zod";
 
 export const schemaConfirm = z.object({
-  email: z.string().email(),
   name: z.string().min(10, "Por favor ingrese un nombre y apellido"),
   confirm: z.string(),
 });

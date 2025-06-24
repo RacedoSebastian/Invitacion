@@ -18,11 +18,11 @@ const transporter = nodemailer.createTransport({
 });
 
 async function confirmar(req, res) {
-  const { name, email, confirm } = req.body;
-  console.log("🚀 ~ confirmar ~ name, email, confirm:", name, email, confirm);
+  const { name, confirm } = req.body;
+  console.log("🚀 ~ confirmar ~ name, email, confirm:", name, confirm);
   try {
     const info = await transporter.sendMail({
-      from: email,
+      from: name,
       to: process.env.EMAIL,
       subject: `De: ${name}`,
       html: `<!DOCTYPE html>
