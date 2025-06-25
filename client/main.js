@@ -134,3 +134,15 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+document.addEventListener(
+  "click",
+  () => {
+    const audio = document.getElementById("backgroundMusic");
+    console.log("🚀 ~ audio sonido:", audio);
+    if (audio) {
+      audio.muted = false;
+      audio.play();
+    }
+  },
+  { once: true }
+); // Solo la primera vez
