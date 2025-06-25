@@ -44,6 +44,7 @@
     <i id="audioIcon" class="fas fa-volume-up"></i>
   </div>
   <audio id="backgroundMusic" src="./justin.mp3" loop muted></audio>
+
   <header class="header">
     <img src="./public/fondoVictoria2.png" alt="" class="imgPre" id="inicio" />
   </header>
@@ -382,24 +383,28 @@
         })(jQuery, simplyCountdown);
     </script>
     <script>
-    const audio = document.getElementById("backgroundMusic");
-    const icon = document.getElementById("audioIcon");
-    const toggle = document.getElementById("muteToggle");
+  const audio = document.getElementById("backgroundMusic");
+  const icon = document.getElementById("audioIcon");
+  const toggle = document.getElementById("muteToggle");
 
-    // Reproducir audio tras primera interacción (y desmutear)
-    document.body.addEventListener("click", () => {
-      audio.muted = false;
-      audio.play().catch(() => {
-        console.log("Autoplay bloqueado");
-      });
-    }, { once: true });
+  // Set volumen inicial
+  audio.volume = 1;
 
-    // Toggle mute/unmute al click
-    toggle.addEventListener("click", () => {
-      audio.muted = !audio.muted;
-      icon.className = audio.muted ? "fas fa-volume-mute" : "fas fa-volume-up";
+  // Activar música tras primer clic en el body
+  document.body.addEventListener("click", () => {
+    audio.muted = false;
+    audio.play().catch((err) => {
+      console.warn("Autoplay bloqueado:", err);
     });
-  </script>
+  }, { once: true });
+
+  // Mute/Unmute manual con botón
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evita que reinicie el evento del body
+    audio.muted = !audio.muted;
+    icon.className = audio.muted ? "fas fa-volume-mute" : "fas fa-volume-up";
+  });
+</script>
     <script type="module" src="main.js"></script>
 </body>
 
