@@ -1,8 +1,8 @@
 :root {
-    /* --primary: #fae6ee;
-    --secondary: #ffc8dd;
-    --gary: #e1e1e1;  */
-    --gray-background: #9bbbef ;
+    --primary: #fff;
+    --secondary: #000000;
+    --gary: #e1e1e1;
+    --gray-background: #ec041f; ;
     --font-primary: Poppins;
     --fonst-secondary: Playwrite AR, cursive;
 }
@@ -21,7 +21,7 @@ html {
 
 body {
     font-size: 1.5rem;
-    background-color:#afcbdc;
+    background-color: var(--gray-background);
     font-family: var(--font-primary);
 }
 
@@ -56,21 +56,21 @@ h2 {
 
 .title h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #214885;
+    color: var(--primary);
 }
 
 .cuenta-regresiva {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
-    color: #214885;
+    color: var(--secondary);
     background-position: bottom center;
     text-align: center;
     font-size: 1.5rem;
 }
 
 .cuenta-regresiva h2{
-    color: #2b60b5;
+    color: var(--primary);
 }
 
 .simply-section {
@@ -95,15 +95,14 @@ h2 {
     height: 30rem;
     margin-top: 3rem;
     padding: 5rem;
-    background-color: var(--secondary);
+    background-color:#fbb49c;
     display: grid;
     place-content: center;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .confirmar-presencia h2{
-    color: #214885;
+    color: var(--gray-background);
 }
 
 .presencia-form {
@@ -151,7 +150,7 @@ h2 {
 }
 
 #errors {
-    color: red;
+    color: white;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
@@ -191,7 +190,7 @@ h2 {
 }
 
 .hamburger div {
-    background-color: #214885;
+    background-color: var(--primary);
     height: 4px;
     margin: 5px 0;
     width: 100%;
@@ -204,7 +203,7 @@ h2 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #2b60b5;
+    background-color: var(--gray-background);
     overflow-x: hidden;
     transition: 0.4s;
     padding-top: 60px;
@@ -221,12 +220,12 @@ h2 {
 }
 
 .menu a:hover {
-    background-color: #9bbbef ;
+    background-color: #c93647 ;
 }
 
 .menu.active {
     left: 0;
-    border: 1px solid #9bbbef 
+    border: 1px solid #c93647 
 }
 
 
@@ -243,7 +242,7 @@ h2 {
     border-radius: 12px;
     margin: 10px 0 10px 0;
     padding: 20px;
-    color: #214885;
+    color: var(--primary);
 }
 
 .imgTexto {
@@ -262,7 +261,7 @@ h2 {
 }
 
 .fechaXV {
-    background-image: url("../public/imgEditadaCirculo.png");
+    background-image: url("../public/circuloJuanjo-removebg-preview.png");
     background-position: center center;
     background-size: 350px;
     background-repeat: no-repeat;
@@ -276,21 +275,21 @@ h2 {
 .fechaXV h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
-    color: #214885;
+    color: var(--primary);
 }
 
 
 
 .musica a {
     border-radius: 15px;
-    border: none;
+    border: solid;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
     color: var(--gray-background);
     font-family: var(--font-primary);
     padding: 10px;
-    background-color: #214885;
+    background-color: #fbb49c;
     cursor: pointer;
 
 }
@@ -299,8 +298,8 @@ h2 {
 .copy {
     padding: 20px 0 10px 0;
     text-align: center;
-    background-color: #afcbdc ;
-    color: #214885;
+    background-color: #fbb49c ;
+    color: var(--gray-background);
 }
 
 @media (min-width: 768px) {
@@ -420,18 +419,18 @@ h2 {
     font-size: x-large;
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #214885;
+    color: var(--gray-background);
 }
 .musica fieldset {
     margin: 1rem;
-    background-color: #9bbbef;
+    background-color: #fbb49c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    border-color: #214885;
+    border-color: var(--gray-background);
 }
 
 .musica .image {
@@ -447,10 +446,12 @@ h2 {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    background-color: #214885;
-    color: #9bbbef;
+    background-color: #fbb49c;
+    color: var(--gray-background);
     padding: 0 1rem;
     border-radius: 2rem;
+    border: solid;
+    border-color: var(--gray-background);
 }
 
 .musica .petrona {
@@ -523,7 +524,7 @@ h2 {
   right: 10px;
   width: 5rem;
   height: 5rem;
-  background-color: #214885;
+  background-color: var(--gray-background);
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -535,7 +536,7 @@ h2 {
 }
 
 .audio-box:hover {
-  background-color: #2b60b5;
+  background-color: var(--gray-background);
 }
 
 .audio-box i {
