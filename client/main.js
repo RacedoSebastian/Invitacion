@@ -65,12 +65,24 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       console.log("��� ~ data:", data);
       if (!data.message) {
-        data.map((message) => {
-          console.log("🚀 ~ data.map ~ message:", message.issue);
-          errors.innerHTML = message.issue;
+        if (Array.isArray(data)) {
+          data.forEach((message) => {
+            console.log("🚀 ~ data.forEach ~ message:", message.issue);
+            errors.innerHTML = message.issue;
+            submitButton.disabled = false;
+          });
+        } else if (data.error) {
+          errors.innerHTML = data.error;
           submitButton.disabled = false;
-        });
+        }
         return;
+        // if (!data.message) {
+        //   data.map((message) => {
+        //     console.log("🚀 ~ data.map ~ message:", message.issue);
+        //     errors.innerHTML = message.issue;
+        //     submitButton.disabled = false;
+        //   });
+        //   return;
       }
       alert(data.message);
       errors.innerHTML = "";
