@@ -100,17 +100,17 @@ async function confirmar(req, res) {
 </head>
 <body>
   <div class="container">
-    <h1>¡Confirmación Mis XV, Victoria!</h1>
+    <h1>¡Confirmación Mis 50, Juanjo!</h1>
 
     <div class="message">
-      <h2>Hola Victoria 💙</h2>
+      <h2>Hola Juanjo 💙</h2>
       <p>Soy <strong>${name}</strong> y quiero decirte que:</p>
       <p><span class="tag">${confirm}</span></p>
       <p>¡Gracias por invitarme a ser parte de este momento tan especial! 🎉</p>
     </div>
 
     <div class="footer">
-      <p>&copy; 2025 Fiesta de 15 de Victoria</p>
+      <p>&copy; 2025 Fiesta de 50 de Juanjo</p>
       <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
     </div>
   </div>
