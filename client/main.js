@@ -119,9 +119,9 @@ const openModalBtn = document.getElementById("openModalBtn");
 const closeBtn = document.getElementsByClassName("close")[0];
 
 // Función para abrir el modal
-openModalBtn.onclick = function () {
-  modal.style.display = "block";
-};
+// openModalBtn.onclick = function () {
+//   modal.style.display = "block";
+// };
 
 // Función para cerrar el modal cuando se hace clic en el botón "x"
 closeBtn.onclick = function () {
