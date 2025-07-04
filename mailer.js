@@ -30,7 +30,7 @@ async function confirmar(req, res) {
   }
   try {
     const info = await transporter.sendMail({
-      from: name,
+      from: `"Invitación Juanjo" <${process.env.EMAIL}>`,
       to: process.env.EMAIL,
       subject: `De: ${name}`,
       html: `<!DOCTYPE html>

@@ -2,7 +2,7 @@ import z from "zod";
 
 export const schemaConfirm = z.object({
   name: z.string().min(10, "Por favor ingrese un nombre y apellido"),
-  confirm: z.string(),
+  confirm: z.string().min(1, "Debe confirmar la asistencia"),
 });
 
 export const validate = (schema) => (req, res, next) => {
