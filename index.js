@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const options = {
-  origin: [process.env.ORIGEN, "https://invitacion-juanjo.vercel.app/", "http://localhost:5173"],
+  origin: [process.env.ORIGEN, "https://invitacion-juanjo.vercel.app", "http://localhost:5173"],
   credentials: true,
 };
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use("/api", routes);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
