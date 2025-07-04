@@ -54,7 +54,7 @@ form.addEventListener("submit", (e) => {
   console.log("🚀 ~ form.addEventListener ~ radio:", radio);
 
   // enviar los datos al back-end
-  fetch("https://invitacion-cumpleanos.onrender.com/api/confirm", {
+  fetch("https://invitacion-cgbx.onrender.com/api/confirm", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

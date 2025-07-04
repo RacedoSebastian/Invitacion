@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const options = {
-  origin: [process.env.ORIGEN, "https://invitacion-juanjo.vercel.app", "http://localhost:5173"],
+  origin: [process.env.ORIGEN, "http://localhost:5173"],
   credentials: true,
 };
 
