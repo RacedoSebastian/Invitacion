@@ -28,6 +28,10 @@ async function confirmar(req, res) {
   } else {
     respuesta = "¡Confirmación recibida! Te esperamos en la fiesta 🎉";
   }
+
+  console.log("EMAIL:", process.env.EMAIL);
+  console.log("PASS:", process.env.EMAIL_PASSWORD);
+  
   try {
     const info = await transporter.sendMail({
       from: `"Invitación Juanjo" <${process.env.EMAIL}>`,
