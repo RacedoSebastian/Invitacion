@@ -383,6 +383,42 @@
         };
       })(jQuery, simplyCountdown);
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // ✅ 1. Navbar hamburguesa (toggle)
+    const menuBurger = document.querySelector(".hamburger");
+    const menu = document.getElementById("menu");
+
+    if (menuBurger && menu) {
+      menuBurger.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+    }
+
+    // ✅ 2. Galería interactiva (efecto al hacer clic)
+    const stack = document.querySelector(".stack");
+    if (stack) {
+      // Invierte el orden para que la última foto quede arriba
+      [...stack.children].reverse().forEach(child => stack.appendChild(child));
+
+      stack.addEventListener("click", function (e) {
+        const topCard = stack.querySelector(".card:last-child");
+        // Solo actúa si se clickea la tarjeta de arriba
+        if (topCard && e.target.closest(".card") === topCard) {
+          // Reinicia animación para que se ejecute siempre
+          topCard.style.animation = "none";
+          void topCard.offsetWidth; // trigger reflow
+          topCard.style.animation = "swap 700ms forwards";
+
+          setTimeout(() => {
+            topCard.style.animation = "";
+            stack.prepend(topCard);
+          }, 700);
+        }
+      });
+    }
+  });
+</script>
   <script type="module" src="main.js"></script>
 </body>
 
