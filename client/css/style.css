@@ -1,8 +1,8 @@
 :root {
-    --primary: #fae6ee;
-    --secondary: #ffc8dd;
+    --primary: #2f5972;
+    --secondary: #0B2345;
     --gary: #e1e1e1;
-    --gray-background: #644f44;
+    --gray-background: white;
     --font-primary: Poppins;
     --fonst-secondary: Playwrite AR, cursive;
 }
@@ -51,8 +51,6 @@ h2 {
 .cuenta-regresiva {
     width: 100%;
     color: var(--gray-background);
-    background-position: bottom center;
-    background-image: url("../public/fondo.webp");
     text-align: center;
     font-size: 1.5rem;
 }
@@ -77,7 +75,7 @@ h2 {
 .confirmar-presencia {
     width: 100%;
     height: 3s0rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding: 5rem;
     background-color: var(--secondary);
     display: grid;
@@ -171,7 +169,7 @@ h2 {
 }
 
 .hamburger div {
-    background-color: #c09ba9;
+    background-color: #0B2345;
     height: 4px;
     margin: 5px 0;
     width: 100%;
@@ -184,7 +182,7 @@ h2 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #ffc8dd;
+    background-color: #2f5972;
     overflow-x: hidden;
     transition: 0.4s;
     padding-top: 60px;
@@ -201,12 +199,12 @@ h2 {
 }
 
 .menu a:hover {
-    background-color: #c09ba9;
+    background-color: #0B2345;
 }
 
 .menu.active {
     left: 0;
-    border: 1px solid #c09ba9;
+    border: 1px solid #0B2345;
 }
 
 
@@ -227,10 +225,12 @@ h2 {
 .imgTexto {
     width: 100%;
     height: 100%;
+    
 }
 
 .header {
     width: 100%;
+    margin-bottom: 0px ;
 }
 
 .imgPre {
@@ -261,7 +261,7 @@ h2 {
     color: var(--gray-background);
     font-family: var(--font-primary);
     padding: 10px;
-    background-color: #ffc8dd;
+    background-color: var(--secondary);
     cursor: pointer;
 
 }
@@ -269,8 +269,8 @@ h2 {
 
 .copy {
     text-align: center;
-    background-color: #ffc8dd;
-    color: #91727e;
+    background-color: var(--primary);
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -322,7 +322,7 @@ h2 {
     min-height: 300px;
     background-color: white;
     position: absolute;
-    top: 60%;
+    top: 51%;
     left: 52%;
     transform: translate(-50%, -50%);
     display: grid;

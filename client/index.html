@@ -11,7 +11,7 @@
     />
     <meta
       property="og:image"
-      content="https://tu-dominio.com/public/Ainara.png"
+      content="https://tu-dominio.com/public/portadaMorena.png"
     />
     <meta property="og:url" content="https://tu-dominio.com" />
     <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Mis XV</title>
+    <title>Mis XV Morena</title>
   </head>
 
   <body>
@@ -40,30 +40,18 @@
       <a href="#ubi">Ubicacion</a>
       <a href="#play">PlayList</a>
       <a href="#confi">Confirmacion</a>
-      <a href="#regalo">Regalos</a>
       <a href="#galery">Galeria</a>
+
+      <!-- HEADER PORTADA -->
+
     </div>
     <header class="header">
-      <img src="Ainara.png" alt="" class="imgPre" id="inicio" />
+      <img src="portadaMorena.png" alt="" class="imgPre" id="inicio" />
     </header>
-    <section class="sectionTexto">
-      <img class="adorno" src="./public/adorno2.svg" alt="" class="imgTexto" />
-      <div class="texto">
-        <p>
-          He aprendido que estar con quienes quiero es suficiente para ser
-          feliz,ten por seguro que el tiempo pasa y que estas letras se borran,
-          pero el recuerdo de tu presencia en esta noche, nunca lo olvidaré
-        </p>
-      </div>
-      <img class="adorno" src="./public/adorno2.svg" alt="" class="imgTexto" />
-    </section>
-    <section class="fechas-regresiva">
-      <section class="fechaXV">
-        <h2>SABADO 24</h2>
-        <h2>DE</h2>
-        <h2>AGOSTO</h2>
-      </section>
-      <section class="cuenta-regresiva" id="tempo">
+
+    <!-- SECTION CUENTA REGRESIVA -->
+
+    <section class="cuenta-regresiva" id="tempo">
         <h2>
           Comienza la cuenta regresiva <br />
           para el Gran Dìa
@@ -72,55 +60,54 @@
       </section>
     </section>
 
-    <div class="stack" id="galery">
-      <img class="card img-card" src="1.jpeg" alt="" />
-      <img class="card img-card" src="2.jpeg" alt="" />
-      <img class="card img-card" src="3.jpeg" alt="" />
-      <img class="card img-card" src="4.jpeg" alt="" />
-      <img class="card img-card" src="5.jpeg" alt="" />
-      <img class="card img-card" src="6.jpeg" alt="" />
-    </div>
-    <img
-      class="adorno"
-      src="./public/adorno2.svg"
-      alt=""
-      class="imgTexto"
-      id="imgID"
-    />
+    <!-- SECTION FECHA DE LA FIESTA -->
+
+    <section class="fechas-regresiva">
+      <section class="fechaXV">
+        <h2>SABADO 24</h2>
+        <h2>DE</h2>
+        <h2>AGOSTO</h2>
+      </section>
     <div class="sectionConf">
+
+      <!-- SECTION UBICACION -->
+
+      <section class="musica" id="ubi">
+        <fieldset>
+          <legend>Ubicacion</legend>
+          <img class="petrona" src="./public/lugar.jpeg" alt="" />
+          <h2>ROBERT MULTIESPACIOS</h2>
+          <a href="https://maps.app.goo.gl/4CgvgRUjzE66qVSLA">VER UBICACION</a>
+        </fieldset>
+      </section>
+
+      <!-- SECTION MUSICA -->
+
       <section class="musica" id="play">
         <fieldset>
           <legend align="center">Sugerir Canción</legend>
           <h2>MÙSICA</h2>
-          <img class="image" src="./public/musica.svg" alt="musica logo" />
+          <img class="image" src="./public/musicaBlanco.png" alt="musica logo" />
           <p>
             ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?
           </p>
           <a href="https://forms.gle/L6twqhx18gmMhpF99">SUGERIR</a>
         </fieldset>
       </section>
-
-      <section class="musica" id="ubi">
-        <fieldset>
-          <legend>Ubicacion</legend>
-          <img class="petrona" src="./public/petrona.jpg" alt="" />
-          <h2>PETRONA EVENTOS</h2>
-          <a href="https://maps.app.goo.gl/Bq1yYKpGkhXWfsrp6">VER UBICACION</a>
-        </fieldset>
-      </section>
-      <section class="musica" id="regalo">
-        <fieldset>
-          <legend>Regalos</legend>
-          <img class="image" src="regalo.png" alt="" />
-          <p>
-            Tu mejor regalo es tu presencia pero si quieres pudes regalarme otra
-            cosa! te dejo mi cbu/cvu
-          </p>
-          <a id="openModalBtn">VER CBU/CVU</a>
-        </fieldset>
-      </section>
     </div>
-    <img class="adorno" src="./public/adorno2.svg" alt="" class="imgTexto" />
+
+    <!-- SECTION GALERIA DE FOTOS -->
+
+    <div class="stack" id="galery">
+      <img class="card img-card" src="7.jpeg" alt="" />
+      <img class="card img-card" src="8.jpeg" alt="" />
+      <img class="card img-card" src="9.jpeg" alt="" />
+      <img class="card img-card" src="10.jpeg" alt="" />
+      <img class="card img-card" src="11.jpeg" alt="" />
+    </div>
+
+    <!-- SECTION CONFIRMAR ASITENCIA -->
+
     <section class="confirmar-presencia" id="confi">
       <h2>Confirma tu presencia</h2>
       <p id="errors"></p>
@@ -168,20 +155,11 @@
           </div>
         </div>
         <button type="submit">Confirmar</button>
-        <h8>¡CONFIRMAR HASTA EL 17/08!</h8>
+        <h8>¡CONFIRMAR HASTA EL 01/01/2026!</h8>
       </form>
     </section>
-    <!-- Estructura del Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Informacion</h2>
-        <p><strong>CVU: 4530000800014210762751 </strong></p>
-        <p><strong>ALIAS: AVELIZ9789.NX.ARS </strong></p>
-      </div>
-    </div>
     <section class="copy">
-      <h6>©Chaile Gustavo & Racedo Sebastián</h6>
+      <h6>©Racedo Sebastián</h6>
     </section>
     <script>
       function _typeof(t) {
