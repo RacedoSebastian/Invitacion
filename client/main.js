@@ -44,7 +44,7 @@ form.addEventListener("submit", (e) => {
   console.log("🚀 ~ form.addEventListener ~ radio:", radio);
 
   // enviar los datos al back-end
-  fetch("http://localhost:3000/api/confirm", {
+  fetch("https://invitacion-morena.onrender.com/api/confirm", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
