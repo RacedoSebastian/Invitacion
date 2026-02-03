@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" ype="image/png"
+  <link rel="icon" type="image/png"
     href="https://drive.google.com/file/d/1y3XolwmMJQq6-ZNak8hSiQB33L3dJqf5/view?usp=drive_link" />
   <!-- Meta etiquetas de Open Graph -->
-  <meta property="og:title" content="Mis XV - Morena" />
-  <meta property="og:description" content="¡Estás invitado a mis XV! Ven y celebra conmigo este día tan especial." />
-  <meta property="og:image" content="https://tu-dominio.com/public/portadaMorena.png" />
+  <meta property="og:title" content="Mis 22 - SEBASTIAN" />
+  <meta property="og:description" content="¡Estás invitado a mis 22! Ven y celebra conmigo este día tan especial." />
+  <meta property="og:image" content="https://tu-dominio.com/public/portadasebas.jpeg" />
   <meta property="og:url" content="https://tu-dominio.com" />
   <meta property="og:type" content="website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
     href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  <title>Mis XV Morena</title>
+  <title>Mis 22 Sebastián</title>
 </head>
 
 <body>
@@ -33,7 +33,6 @@
     <a href="#inicio">Inicio</a>
     <a href="#tempo">¿Cuanto falta?</a>
     <a href="#ubi">Ubicacion</a>
-    <a href="#play">PlayList</a>
     <a href="#confi">Confirmacion</a>
     <a href="#galery">Galeria</a>
 
@@ -41,7 +40,7 @@
 
   </div>
   <header class="header">
-    <img src="./public/portadaMorena.png" alt="" class="imgPre" id="inicio" />
+    <img src="./public/portadasebas.jpeg" alt="" class="imgPre" id="inicio" />
   </header>
 
   <!-- SECTION CUENTA REGRESIVA -->
@@ -59,10 +58,10 @@
 
   <section class="fechas-regresiva">
     <section class="fechaXV">
-      <h2>SABADO 17</h2>
+      <h2>DOMINGO 08</h2>
       <h2>DE</h2>
-      <h2>ENERO</h2>
-      <h2>22:00 P.M</h2>
+      <h2>FEBRERO</h2>
+      <h2>16:00</h2>
     </section>
     <div class="sectionConf">
 
@@ -71,40 +70,29 @@
       <section class="musica" id="ubi">
         <fieldset>
           <legend>Ubicacion</legend>
-          <img class="petrona" src="./public/lugar.jpeg" alt="" />
-          <h2>ROBERT MULTIESPACIOS</h2>
-          <a href="https://maps.app.goo.gl/4CgvgRUjzE66qVSLA">VER UBICACION</a>
+          <img class="petrona" src="./public/SALON.jpeg" alt="" />
+          <h2>NACHO EVENTOS</h2>
+          <a href="https://maps.app.goo.gl/zmigWA2pw3Sqjt2XA">VER UBICACION</a>
         </fieldset>
       </section>
 
-    <!-- SECTION iGLESIA -->
-
-  </section>
-  <section class="musica" id="ubi">
-    <fieldset>
-      <legend>CEREMONIA</legend>
-      <img class="petrona" src="./public/iglesia.jpg" alt="" />
-      <h2 class="Ubicacion">PARROQUIA NUESTRA SEÑORA DEL CARMEN</h2>
-      <h4>(Viernes 09 de Enero - 20:30 PM)</h4>
-      <a href="https://maps.app.goo.gl/ySyBhnmb9LDk5n6VA">VER UBICACION</a>
-    </fieldset>
-  </section>
-
-  <!-- SECTION GALERIA DE FOTOS -->
+  <!-- SECTION GALERIA DE VIDEO -->
 
   <div class="stack" id="galery">
-    <img class="card img-card" src="./public/7.jpeg" alt="" />
-    <img class="card img-card" src="./public/8.jpeg" alt="" />
-    <img class="card img-card" src="./public/9.jpeg" alt="" />
-    <img class="card img-card" src="./public/10.jpeg" alt="" />
-    <img class="card img-card" src="./public/11.jpeg" alt="" />
+    <h2 class="video-titulo">Joyita del cumpleaños pasado</h2>
+    <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+        <source src="./public/video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
   </div>
 
-  <!-- SECTION CONFIRMAR ASITENCIA -->
+  <!-- SECTION CONFIRMAR ASISTENCIA -->
 
  <section class="confirmar-presencia" id="confi">
   <h2>Confirma tu presencia</h2>
-  <p class="p-confirmar">😁 ¡Escribí tu nombre y confirmá tu asistencia por WhatsApp! 😁</p>
+  <p class="p-confirmar">😁¡Escribí tu nombre y confirmá tu asistencia por WhatsApp!😁</p>
 
   <div class="presencia-form">
     <div class="campo">
@@ -133,8 +121,8 @@
 
     // 🔢 Cambiá este número por el real (formato internacional SIN + ni espacios)
     // Ej: 3815-123456 → 5493815123456
-    const numero = "5493812173618";
-    const mensaje = encodeURIComponent(`¡Hola! Soy ${nombre} y confirmo mi asistencia a los XV de Morena :)`);
+    const numero = "5493812078362";
+    const mensaje = encodeURIComponent(`¡Hola! Soy ${nombre} y confirmo mi asistencia aL cumpleaños`);
     const url = `https://wa.me/${numero}?text=${mensaje}`;
 
     window.open(url, "_blank");
@@ -376,29 +364,6 @@
     if (menuBurger && menu) {
       menuBurger.addEventListener("click", function () {
         menu.classList.toggle("active");
-      });
-    }
-
-    // ✅ 2. Galería interactiva (efecto al hacer clic)
-    const stack = document.querySelector(".stack");
-    if (stack) {
-      // Invierte el orden para que la última foto quede arriba
-      [...stack.children].reverse().forEach(child => stack.appendChild(child));
-
-      stack.addEventListener("click", function (e) {
-        const topCard = stack.querySelector(".card:last-child");
-        // Solo actúa si se clickea la tarjeta de arriba
-        if (topCard && e.target.closest(".card") === topCard) {
-          // Reinicia animación para que se ejecute siempre
-          topCard.style.animation = "none";
-          void topCard.offsetWidth; // trigger reflow
-          topCard.style.animation = "swap 700ms forwards";
-
-          setTimeout(() => {
-            topCard.style.animation = "";
-            stack.prepend(topCard);
-          }, 700);
-        }
       });
     }
   });

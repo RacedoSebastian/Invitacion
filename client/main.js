@@ -3,9 +3,9 @@ import "./css/style.css";
 //main
 simplyCountdown("#app", {
   year: 2026, // required
-  month: 1, // required
-  day: 17, // required
-  hours: 22, // Default is 0 [0-23] integer
+  month: 2, // required
+  day: 8, // required
+  hours: 16, // Default is 0 [0-23] integer
   minutes: 0, // Default is 0 [0-59] integer
   seconds: 0, // Default is 0 [0-59] integer
   words: {
