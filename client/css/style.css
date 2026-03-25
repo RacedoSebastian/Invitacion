@@ -25,7 +25,7 @@ html {
 
 body {
     font-size: 1.5rem;
-    background-color: var(--primary);
+    background-color: var(--bg-color);
     font-family: var(--font-primary);
 }
 
@@ -35,13 +35,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--fonst-secondary)
+    font-family: var(--font-secondary);
 }
 
 h2 {
     font-size: 2rem;
     text-align: center;
-    color: var(--gray-background);
+    color: var(--text-dark);
 }
 
 #app {
@@ -54,7 +54,7 @@ h2 {
 
 .cuenta-regresiva {
     width: 100%;
-    color: var(--gray-background);
+    color: var(--text-dark);
     background-position: bottom center;
     background-image: url("../public/fondo2.png");
     text-align: center;
@@ -77,143 +77,245 @@ h2 {
     display: block;
 }
 
-/* formulario de confirmacion */
+/* ==========================================
+   SECCIÓN CONFIRMAR - CORREGIDA
+   ========================================== */
 .confirmar-presencia {
     width: 100%;
-    height: 3s0rem;
     margin-top: 3rem;
-    padding: 5rem;
+    padding: 5rem 2rem;
     background-color: var(--secondary);
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
+.confirmar-presencia h2 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.p-confirmar {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
 .presencia-form {
-    width: 30rem;
+    width: 100%;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .campo {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-top: 5px;
+    gap: 0.5rem;
 }
 
 .campo input {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 1rem;
-    border: none;
+    border: 2px solid var(--border-color);
     outline: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.campo input:focus {
+    border-color: var(--primary-dark);
 }
 
 .campo label {
     font-size: 1.5rem;
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
 .presencia-form button {
-    padding: 1rem 2rem;
+    padding: 1.2rem 3rem;
     background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 1rem;
+    color: var(--text-dark);
+    border: 2px solid var(--primary-dark);
+    border-radius: 2rem;
     cursor: pointer;
-    color: var(--gray-background);
     font-weight: bold;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.presencia-form button:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Fecha límite */
+.fecha-limite {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   MODAL - CORREGIDO
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 15% auto;
+    padding: 3rem;
+    border: 2px solid var(--border-color);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 1.5rem;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.modal-content p {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin: 1rem 0;
+}
+
+.modal-content strong {
+    color: var(--primary);
     font-size: 2rem;
 }
 
-.campos {
-    display: flex;
-    gap: 5rem;
-    margin: 1rem 0;
-    font-size: 1.5rem;
+.close {
+    color: var(--text-dark);
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-#errors {
-    color: red;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.close:hover,
+.close:focus {
+    color: var(--primary);
 }
 
-
-
-/* media queris */
-@media (min-width: 768px) {
-    .presencia-form {
-        width: 50rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    .cuenta-regresiva {
-
-        font-size: 2rem;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/*sebastian css*/
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==========================================
+   NAVBAR - CORREGIDA
+   ========================================== */
 .navbar {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .hamburger {
     display: block;
     cursor: pointer;
-    width: 30px;
-    height: 25px;
+    width: 35px;
+    height: 30px;
     position: relative;
+    z-index: 1001;
 }
 
 .hamburger div {
-    background-color: var(--secondary);
+    background-color: var(--primary-dark);
     height: 4px;
-    margin: 5px 0;
+    margin: 6px 0;
     width: 100%;
-    transition: 0.4s;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: -300px;
+    width: 300px;
     height: 100%;
-    background-color: var(--primary);
+    background-color: var(--bg-color);
+    border-right: 2px solid var(--border-color);
     overflow-x: hidden;
-    transition: 0.4s;
-    padding-top: 60px;
-    z-index: 999;
-}
-
-.menu a {
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    background-color: var(--secondary);
+    transition: 0.4s ease;
+    padding-top: 80px;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
 .menu.active {
     left: 0;
-    border: 1px solid var(--secondary);
 }
 
+.menu a {
+    padding: 1.5rem 2.5rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid var(--border-color);
+}
 
+.menu a:hover {
+    background-color: var(--primary);
+    color: white;
+    padding-left: 3.5rem;
+}
+
+/* ==========================================
+   RESTO DE ESTILOS
+   ========================================== */
 .sectionTexto {
     width: 100%;
     height: 100%;
@@ -254,27 +356,24 @@ h2 {
     place-content: center;
 }
 
-
-
 .musica a {
     border-radius: 15px;
     border: none;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    color: var(--gray-background);
+    color: var(--text-dark);
     font-family: var(--font-primary);
     padding: 10px;
     background-color: var(--secondary);
     cursor: pointer;
-
 }
-
 
 .copy {
     text-align: center;
-    background-color: #ffc8dd;
-    color: #91727e;
+    background-color: var(--accent-sand);
+    color: var(--text-dark);
+    padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -289,6 +388,14 @@ h2 {
         justify-content: center;
         margin: 0 auto;
     }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .cuenta-regresiva {
+        font-size: 2rem;
+    }
 }
 
 .adornoCuenta {
@@ -302,7 +409,6 @@ h2 {
         height: 300px;
     }
 }
-
 
 /* caruxel */
 .stack {
@@ -343,7 +449,6 @@ h2 {
 @media (min-width: 768px) {
     .img-card {
         height: 500px;
-
     }
 }
 
@@ -380,18 +485,19 @@ h2 {
     }
 }
 
-.adorno{
+.adorno {
     width: 300px;
     display: flex;
     justify-content: center;
     margin: 20px auto;
 }
 
-.sectionConf{
+.sectionConf {
     width: 95%;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
 }
+
 .musica fieldset {
     margin: 1rem;
     background-color: var(--primary);
@@ -417,7 +523,7 @@ h2 {
     font-weight: bold;
     text-align: center;
     background-color: var(--secondary);
-    color: var(--gray-background);
+    color: var(--text-dark);
     padding: 0 1rem;
     border-radius: 2rem;
 }
@@ -427,60 +533,41 @@ h2 {
 }
 
 @media (min-width: 768px) {
-    .sectionConf{
+    .sectionConf {
         display: grid;
         width: 90%;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-around;
         gap: 10px;
     }
-    .musica{
-       width: 100%;
+    
+    .musica {
+        width: 100%;
     }
-}
-
-/* Estilos para el modal */
-.modal {
-    display: none;
-    /* Oculto por defecto */
-    position: fixed;
-    /* Fijado en la pantalla */
-    z-index: 1;
-    /* Asegura que el modal esté sobre otros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Ocupa toda la pantalla */
-    height: 100%;
-    /* Ocupa toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo semitransparente */
-}
-
-/* Estilos para el contenido del modal */
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    /* Centrado vertical y horizontal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Ancho del modal */
-    max-width: 500px;
-    border-radius: 8px;
-}
-
-/* Estilos para el botón de cierre */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    
+    .confirmar-presencia {
+        padding: 6rem 3rem;
+    }
+    
+    .p-confirmar {
+        font-size: 1.8rem;
+    }
+    
+    .presencia-form {
+        max-width: 50rem;
+    }
+    
+    .campo input {
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .presencia-form button {
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+    }
+    
+    .fecha-limite {
+        font-size: 1.4rem;
+    }
 }

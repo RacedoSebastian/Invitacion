@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" ype="image/png"
+  <link rel="icon" type="image/png"
     href="https://drive.google.com/file/d/1y3XolwmMJQq6-ZNak8hSiQB33L3dJqf5/view?usp=drive_link" />
   <!-- Meta etiquetas de Open Graph -->
   <meta property="og:title" content="Nuestro casamiento - N & A" />
@@ -82,48 +82,104 @@
         <img class="image" src="./public/carta-de-amor.png" alt="" />
         <p>Tarjeta de adultos: $7.000</p>
         <p>Tarjeta de niños: $5.000</p>
-        <a id="openModalBtn">VER CBU/CVU</a>
+        <a href="#" id="openModalBtn">VER CBU/CVU</a>
       </fieldset>
     </section>
   </div>
   <img class="adorno" src="./public/adornoM.png" alt="" class="imgTexto" />
+  
   <section class="confirmar-presencia" id="confi">
     <h2>Confirma tu presencia</h2>
-    <p id="errors"></p>
-    <form class="presencia-form" id="confirmation-form">
+    <p class="p-confirmar">😁 ¡Escribí tu nombre y confirmá tu asistencia por WhatsApp! 😁</p>
+
+    <div class="presencia-form">
       <div class="campo">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+        <label for="nombre-inv">Nombre y Apellido</label>
+        <input type="text" id="nombre-inv" maxlength="40" placeholder="Tu nombre completo" />
       </div>
-      <div class="campo">
-        <label for="email">Correo Electronico</label>
-        <input type="email" id="email" name="email" placeholder="correo electonico" required />
-      </div>
-      <div class="campos">
-        <div class="radio">
-          <input type="radio" name="confirmar" id="confirmar" value="si confirmo" required />
-          <label for="confirmar">Si Confirmo</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="confirmar" id="noConfirmar" value="no puedo" required />
-          <label for="noConfirmar">No Puedo &#128557;</label>
-        </div>
-      </div>
-      <button type="submit">Confirmar</button>
-      <h8>¡CONFIRMAR HASTA EL 20/04!</h8>
-    </form>
+      <button id="confirmar-btn">Confirmar</button>
+      <p class="fecha-limite">📅 Confirmar hasta el 20/04</p>
+    </div>
   </section>
+
+  <section class="copy">
+    <h6>©Racedo Sebastián</h6>
+  </section>
+
   <!-- Estructura del Modal -->
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Informacion</h2>
-      <p><strong>ALIAS: MIA..2703 </strong></p>
+      <p><strong>ALIAS: MIA..2703</strong></p>
     </div>
   </div>
-  <section class="copy">
-    <h6>©Racedo Sebastián</h6>
-  </section>
+
+  <script>
+    // WhatsApp confirmation
+    document.getElementById("confirmar-btn").addEventListener("click", function () {
+      const nombre = document.getElementById("nombre-inv").value?.trim();
+
+      if (!nombre) {
+        alert("Por favor, ingresá tu nombre para confirmar tu asistencia.");
+        return;
+      }
+
+      const numero = "5493814665631";
+      const mensaje = encodeURIComponent(`¡Hola! Soy ${nombre} y confirmo mi asistencia a su casamiento! :)`);
+      const url = `https://wa.me/${numero}?text=${mensaje}`;
+
+      window.open(url, "_blank");
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        menu.classList.remove('active');
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('myModal');
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.querySelector('.close');
+
+    // Abrir modal
+    openModalBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'block';
+    });
+
+    // Cerrar modal con la X
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Cerrar modal al hacer click fuera
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+
   <script>
     function _typeof(t) {
       return (_typeof =
@@ -141,16 +197,6 @@
           })(t);
     }
     !(function (t) {
-      /*!
-       * Project : simply-countdown
-       * Date : 27/06/2015
-       * License : MIT
-       * Version : 1.6.0
-       * Author : Vincent Loy <vincent.loy1@gmail.com>
-       * Contributors :
-       *  - Justin Beasley <JustinB@harvest.org>
-       *  - Nathan Smith <NathanS@harvest.org>
-       */
       var n = function t(n) {
         for (var e, o = n || {}, s = 1; s < arguments.length; s += 1) {
           e = arguments[s];
