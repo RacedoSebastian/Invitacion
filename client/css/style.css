@@ -1,8 +1,12 @@
 :root {
-    --primary: #fae6ee;
-    --secondary: #ffc8dd;
-    --gary: #e1e1e1;
-    --gray-background: #644f44;
+    --bg-color: #FDFBF7;
+    --primary: #e4d1ac;
+    --primary-dark: #8B7355;
+    --secondary: #C5A059;
+    --accent-sand: #E6DCCF;
+    --accent-green: #94A893;
+    --border-color: #D4C5B0;
+    --text-dark: #6B5642;
     --font-primary: Poppins;
     --fonst-secondary: Playwrite AR, cursive;
 }
@@ -52,7 +56,7 @@ h2 {
     width: 100%;
     color: var(--gray-background);
     background-position: bottom center;
-    background-image: url("../public/fondo.webp");
+    background-image: url("../public/fondo2.png");
     text-align: center;
     font-size: 1.5rem;
 }
@@ -171,7 +175,7 @@ h2 {
 }
 
 .hamburger div {
-    background-color: #c09ba9;
+    background-color: var(--secondary);
     height: 4px;
     margin: 5px 0;
     width: 100%;
@@ -184,7 +188,7 @@ h2 {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #ffc8dd;
+    background-color: var(--primary);
     overflow-x: hidden;
     transition: 0.4s;
     padding-top: 60px;
@@ -201,12 +205,12 @@ h2 {
 }
 
 .menu a:hover {
-    background-color: #c09ba9;
+    background-color: var(--secondary);
 }
 
 .menu.active {
     left: 0;
-    border: 1px solid #c09ba9;
+    border: 1px solid var(--secondary);
 }
 
 
@@ -234,7 +238,7 @@ h2 {
 }
 
 .imgPre {
-    width: 100%;
+    width: 99%;
     height: 100%;
 }
 
@@ -261,7 +265,7 @@ h2 {
     color: var(--gray-background);
     font-family: var(--font-primary);
     padding: 10px;
-    background-color: #ffc8dd;
+    background-color: var(--secondary);
     cursor: pointer;
 
 }
@@ -419,7 +423,7 @@ h2 {
 }
 
 .musica .petrona {
-    width: 100%;
+    width: 70%;
 }
 
 @media (min-width: 768px) {
